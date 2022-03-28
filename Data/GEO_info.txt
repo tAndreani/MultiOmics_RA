@@ -1,1 +1,5 @@
+GSE193335: Bulk RNA-seq on paws of collagen-induced arthritis (CIA) mouse model at different disease stages
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE193335
 
+GSE193336: Bulk RNA-seq on unstimulated and LPS-stimulated human macrophages
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE193336
