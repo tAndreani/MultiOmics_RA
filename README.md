@@ -7,3 +7,13 @@ Rheumatoid arthritis (RA) is characterized by joint infiltration of immune cells
 
 ### Figure 1: Arthritis progression in CIA mice.
 #### [Fig. 1c Evolution of arthritis severity by scores (sum of 4 paws, plotted as mean ± SEM).](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/linePlot_scoreSum.R)
+
+#### Fig. 1d Arthritis severity at each sacrifice time point per mouse subject. 
+
+### Fig. 1e Spleen weight measured at each sacrifice time point. 
+
+### Fig. 1f Plasma TNF-α concentration. 
+
+### Fig. 1g Plasma CXCL1 concentration. 
+
+### Fig. 1h Plasma CCL5 concentration.
