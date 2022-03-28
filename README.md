@@ -6,16 +6,16 @@ Rheumatoid arthritis (RA) is characterized by joint infiltration of immune cells
 ##### Check our preprint [Multi-omics profiling of collagen-induced arthritis mouse model reveals early metabolic dysregulation via SIRT1 axis](https://www.biorxiv.org/content/10.1101/2022.03.09.483621v1) in _bioRxiv_.
 
 ### Figure 1: Arthritis progression in CIA mice.
-#### [Fig. 1c Evolution of arthritis severity by scores (sum of 4 paws, plotted as mean ± SEM).](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/linePlot_scoreSum.R)
+#### [Fig.1c Evolution of arthritis severity by scores (sum of 4 paws, plotted as mean ± SEM).](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/linePlot_scoreSum.R)
 
-#### Fig. 1d Arthritis severity at each sacrifice time point per mouse subject. 
+#### [Fig.1d Arthritis severity at each sacrifice time point per mouse subject.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/boxPlot_scoreSum.R)
 
-#### Fig. 1e Spleen weight measured at each sacrifice time point. 
+#### [Fig.1e Spleen weight measured at each sacrifice time point.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/boxPlot_Spleen_Weight.R)
 
-#### Fig. 1f Plasma TNF-α concentration. 
+#### [Fig.1f Plasma TNF-α concentration.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/boxPlot_Plasma_TNF.R)
 
-#### Fig. 1g Plasma CXCL1 concentration. 
+#### [Fig.1g Plasma CXCL1 concentration.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/boxPlot_Plasma_CXCL1.R)
 
-#### Fig. 1h Plasma CCL5 concentration.
+#### [Fig.1h Plasma CCL5 concentration.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/boxPlot_Plasma_CCL5.R)
 
 ### Figure 2: UPLC-MS/MS metabolomics revealed early metabolic alterations in plasma of CIA mice.
