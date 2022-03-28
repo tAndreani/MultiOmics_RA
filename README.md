@@ -4,3 +4,6 @@ Rheumatoid arthritis (RA) is characterized by joint infiltration of immune cells
 
 
 ##### Check our preprint [Multi-omics profiling of collagen-induced arthritis mouse model reveals early metabolic dysregulation via SIRT1 axis](https://www.biorxiv.org/content/10.1101/2022.03.09.483621v1) in _bioRxiv_.
+
+### Figure 1: Arthritis progression in CIA mice.
+#### Fig. 1c Evolution of arthritis severity by scores (sum of 4 paws, plotted as mean ± SEM). 
