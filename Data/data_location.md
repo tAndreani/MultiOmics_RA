@@ -6,3 +6,6 @@
 
 #### Fig. 1d: Matching table of days and weeks
 ~/cloud-data/snf-mgln-immunometabolism/CIA_FH2000/CIA_multiomics_figure/data/metadata/matchTable_absolutDay_Timepoint.csv
+
+#### Fig. 1d: p values by t-test
+~/cloud-data/snf-mgln-immunometabolism/CIA_FH2000/CIA_multiomics_figure/result/Significance_Test/boxPlot_scoreSum_tTest.csv
