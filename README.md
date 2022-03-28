@@ -19,3 +19,15 @@ Rheumatoid arthritis (RA) is characterized by joint infiltration of immune cells
 #### [Fig.1h Plasma CCL5 concentration.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/boxPlot_Plasma_CCL5.R)
 
 ### Figure 2: UPLC-MS/MS metabolomics revealed early metabolic alterations in plasma of CIA mice.
+
+### Figure 3: Transcriptional profiling of CIA paws over disease progression revealed innate immune cell activation and metabolic adaptations.
+
+### Figure 4: Tissue MALDI-MS imaging showed reduction of NAD+ in CIA paws.
+
+### Figure 5: Multi-omics data integration identifies ROS as disease-correlated factor.
+
+### Figure 6: Transcriptional profiling of LPS-stimulated human macrophages partially overlaps to early transcript changes in mouse CIA.
+
+### Figure 7: Gene expression of human synovium over disease progression to RA showed similar changes in oxidative stress and innate immunity.
+
+### Figure 8: Metabolic reprogramming in early RA.
