@@ -46,7 +46,21 @@ Rheumatoid arthritis (RA) is characterized by joint infiltration of immune cells
 
 ### Figure 4: Tissue MALDI-MS imaging showed reduction of NAD+ in CIA paws.
 
+#### Fig.4a PCA score plot with paw samples color-coded by their respective arthritis scores. 
+
+#### Fig.4b PCA score plot with paw samples color-coded by their respective sacrifice time points. 
+
+#### Fig.4c NAD+ distribution on paw tissue ion image per mouse. 
+
+#### Fig.4d Image signal quantification of NAD+ on paws. 
+
 ### Figure 5: Multi-omics data integration identifies ROS as disease-correlated factor.
+
+#### Fig.5b Proportion of total variance (Var.) explained by individual factors for each omics experiment. 
+
+#### Fig.5c Visualization of samples using Factors 1, 2 and 3. 
+
+#### Fig.5d Absolute weights of the top features of Factors 1 in transcriptome data. e Gene set enrichment analysis on the feature weights of mRNA in Factor 1 (FDR < 0.05).
 
 ### Figure 6: Transcriptional profiling of LPS-stimulated human macrophages partially overlaps to early transcript changes in mouse CIA.
 
