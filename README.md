@@ -64,6 +64,26 @@ Rheumatoid arthritis (RA) is characterized by joint infiltration of immune cells
 
 ### Figure 6: Transcriptional profiling of LPS-stimulated human macrophages partially overlaps to early transcript changes in mouse CIA.
 
+#### Fig.6a PCA score plot with four samples of human macrophages before and after LPS stimulation. 
+
+#### Fig.6b Overlap of significant differentially expressed genes between CIA paws at week three and LPS-stimulated macrophages. 
+
+#### Fig.6c Enriched or depleted Gene Ontology biological process gene sets. 
+
+#### Fig.6d Top 20 activated and top 20 inhibited upstream regulators from analysis by IPA. 
+
 ### Figure 7: Gene expression of human synovium over disease progression to RA showed similar changes in oxidative stress and innate immunity.
 
+#### Fig.7b PCA score plot with patient samples color-coded by disease stage. 
+
+#### Fig.7c Number of significant differentially expressed genes at each disease stage. 
+
+#### Fig.7d Overlap of significant differentially upregulated genes between CIA paws at week three and human synovium of different RA stages. 
+
+#### Fig.7e Enriched or depleted Gene Ontology biological process gene sets. 
+
+#### Fig.7f Top 10 activated and top 10 inhibited upstream regulators from analysis by IPA.
+
 ### Figure 8: Metabolic reprogramming in early RA.
+
+#### Fig.8a-c Differential gene expression of major metabolic genes in the RNA-seq studies of CIA mouse paws, LPS-stimulated human macrophages, and human RA synovium biopsies. 
