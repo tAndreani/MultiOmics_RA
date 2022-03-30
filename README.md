@@ -20,7 +20,29 @@ Rheumatoid arthritis (RA) is characterized by joint infiltration of immune cells
 
 ### Figure 2: UPLC-MS/MS metabolomics revealed early metabolic alterations in plasma of CIA mice.
 
+#### Fig.2a Principal component analysis (PCA) score plot with plasma samples projected onto the first 2 principal components. 
+
+#### Fig.2b Percentage of each metabolic group detected by UPLC-MS/MS. 
+
+#### Fig.2c Number of significant metabolites at each time point (CIA samples compared to the controls).
+
+#### Fig.2d Percentage of significant metabolites per metabolite group at each time point.
+
+#### Fig.2e Percentage of upregulated and downregulated significant metabolites per group over time. 
+
+#### Fig.2f-g Fold changes and significances of peptides, energy metabolites and related cofactors that are significant at >= 2 time points (these 2 figures were plotted on the same scale). 
+
 ### Figure 3: Transcriptional profiling of CIA paws over disease progression revealed innate immune cell activation and metabolic adaptations.
+
+#### Fig.3a PCA score plot with paw samples color-coded by their respective arthritis scores. 
+
+#### Fig.3b PCA score plot with paw samples color-coded by their respective sacrifice time points. 
+
+#### Fig.3c Number of differentially expressed genes at each time point (CIA samples compared to the controls). 
+
+#### Fig.3d Enriched or depleted Gene Ontology biological process gene sets at each time point.
+
+#### Fig.3e Top 10 activated and top 10 inhibited upstream regulators from analysis by IPA.
 
 ### Figure 4: Tissue MALDI-MS imaging showed reduction of NAD+ in CIA paws.
 
