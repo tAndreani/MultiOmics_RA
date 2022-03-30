@@ -60,7 +60,9 @@ Rheumatoid arthritis (RA) is characterized by joint infiltration of immune cells
 
 #### Fig.5c Visualization of samples using Factors 1, 2 and 3. 
 
-#### Fig.5d Absolute weights of the top features of Factors 1 in transcriptome data. e Gene set enrichment analysis on the feature weights of mRNA in Factor 1 (FDR < 0.05).
+#### Fig.5d Absolute weights of the top features of Factors 1 in transcriptome data. 
+
+#### Fig.5e Gene set enrichment analysis on the feature weights of mRNA in Factor 1 (FDR < 0.05).
 
 ### Figure 6: Transcriptional profiling of LPS-stimulated human macrophages partially overlaps to early transcript changes in mouse CIA.
 
