@@ -56,36 +56,40 @@ Rheumatoid arthritis (RA) is characterized by joint infiltration of immune cells
 
 ### Figure 5: Multi-omics data integration identifies ROS as disease-correlated factor.
 
-#### Fig.5b Proportion of total variance (Var.) explained by individual factors for each omics experiment. 
+#### [Fig.5b Proportion of total variance (Var.) explained by individual factors for each omics experiment.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/train_mofa_model.R)
 
-#### Fig.5c Visualization of samples using Factors 1, 2 and 3. 
+#### [Fig.5c Visualization of samples using Factors 1, 2 and 3.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/violinPlot_factor_value_score.R)
 
-#### Fig.5d Absolute weights of the top features of Factors 1 in transcriptome data. 
+#### [Fig.5d Absolute weights of the top features of Factors 1 in transcriptome data.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/dumbbellPlot_gene_weight.R)
 
-#### Fig.5e Gene set enrichment analysis on the feature weights of mRNA in Factor 1 (FDR < 0.05).
+#### [Fig.5e Gene set enrichment analysis on the feature weights of mRNA in Factor 1 (FDR < 0.05).](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/dumbbellPlot_GSEA_GO.R)
 
 ### Figure 6: Transcriptional profiling of LPS-stimulated human macrophages partially overlaps to early transcript changes in mouse CIA.
 
-#### Fig.6a PCA score plot with four samples of human macrophages before and after LPS stimulation. 
+#### [Fig.6a PCA score plot with four samples of human macrophages before and after LPS stimulation.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/Normoxia_PCA_DESeq2_Normalization.R)
 
-#### Fig.6b Overlap of significant differentially expressed genes between CIA paws at week three and LPS-stimulated macrophages. 
+#### [Fig.6b Overlap of significant differentially expressed genes between CIA paws at week three and LPS-stimulated macrophages.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/Venn_Sig_Genes.R)
 
-#### Fig.6c Enriched or depleted Gene Ontology biological process gene sets. 
+#### [Fig.6c Enriched or depleted Gene Ontology biological process gene sets.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/dotPlot_GSEA_go_bp.R)
 
-#### Fig.6d Top 20 activated and top 20 inhibited upstream regulators from analysis by IPA. 
+#### [Fig.6d Top 20 activated and top 20 inhibited upstream regulators from analysis by IPA.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/Heatmap_Upstream_Regulator.R)
 
 ### Figure 7: Gene expression of human synovium over disease progression to RA showed similar changes in oxidative stress and innate immunity.
 
-#### Fig.7b PCA score plot with patient samples color-coded by disease stage. 
+#### [Fig.7b PCA score plot with patient samples color-coded by disease stage.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/PCA_GSE89408_DESeq2_Normalization.R)
 
-#### Fig.7c Number of significant differentially expressed genes at each disease stage. 
+#### [Fig.7c Number of significant differentially expressed genes at each disease stage.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/barPlot_GSE89408_DEG_Number.R)
 
-#### Fig.7d Overlap of significant differentially upregulated genes between CIA paws at week three and human synovium of different RA stages. 
+#### [Fig.7d Overlap of significant differentially upregulated genes between CIA paws at week three and human synovium of different RA stages.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/vennDiagram_GSE89408_Sig_Genes_with_CIA_3wk.R)
 
-#### Fig.7e Enriched or depleted Gene Ontology biological process gene sets. 
+#### [Fig.7e Enriched or depleted Gene Ontology biological process gene sets.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/dotPlot_GSE89408_GSEA_GO_BP.R)
 
-#### Fig.7f Top 10 activated and top 10 inhibited upstream regulators from analysis by IPA.
+#### [Fig.7f Top 10 activated and top 10 inhibited upstream regulators from analysis by IPA.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/heatmap_GSE89408_upstream_regulator.R)
 
 ### Figure 8: Metabolic reprogramming in early RA.
 
-#### Fig.8a-c Differential gene expression of major metabolic genes in the RNA-seq studies of CIA mouse paws, LPS-stimulated human macrophages, and human RA synovium biopsies. 
+#### [Fig.8a Differential gene expression of major metabolic genes in the RNA-seq studies of CIA mouse paws.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/dotPlot_CIA_ROS_gene.R)
+
+#### [Fig.8b Differential gene expression of major metabolic genes in the RNA-seq studies of LPS-stimulated human macrophages.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/Normoxia_dotPlot_macrophage_ROS_gene.R)
+
+#### [Fig.8c Differential gene expression of major metabolic genes in the RNA-seq studies of human RA synovium biopsies.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/dotPlot_GSE89408_ROS_genes.R)
