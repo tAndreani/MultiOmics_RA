@@ -32,20 +32,19 @@ Rheumatoid arthritis (RA) is characterized by joint infiltration of immune cells
 
 #### [Fig.2f Fold changes and significances of peptides that are significant at >= 2 time points.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/dotPlot_peptide.R)
 
-#### [Fig.2g Fold changes and significances of energy metabolites and related cofactors that are significant at >= 2 time points.]
-(https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/dotPlot_carbohydrate.R)
+#### [Fig.2g Fold changes and significances of energy metabolites and related cofactors that are significant at >= 2 time points.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/dotPlot_carbohydrate.R)
 
 ### Figure 3: Transcriptional profiling of CIA paws over disease progression revealed innate immune cell activation and metabolic adaptations.
 
-#### Fig.3a PCA score plot with paw samples color-coded by their respective arthritis scores. 
+#### [Fig.3a PCA score plot with paw samples color-coded by their respective arthritis scores.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/PCA_DESeq2_manuscript.R)
 
-#### Fig.3b PCA score plot with paw samples color-coded by their respective sacrifice time points. 
+#### [Fig.3b PCA score plot with paw samples color-coded by their respective sacrifice time points.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/PCA_DESeq2_manuscript.R)
 
-#### Fig.3c Number of differentially expressed genes at each time point (CIA samples compared to the controls). 
+#### [Fig.3c Number of differentially expressed genes at each time point (CIA samples compared to the controls).](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/barPlot_DEG_Number.R)
 
-#### Fig.3d Enriched or depleted Gene Ontology biological process gene sets at each time point.
+#### [Fig.3d Enriched or depleted Gene Ontology biological process gene sets at each time point.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/dotPlot_GSEA_go_bp.R)
 
-#### Fig.3e Top 10 activated and top 10 inhibited upstream regulators from analysis by IPA.
+#### [Fig.3e Top 10 activated and top 10 inhibited upstream regulators from analysis by IPA.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/heatmap_upstream_regulator_manuscript.R)
 
 ### Figure 4: Tissue MALDI-MS imaging showed reduction of NAD+ in CIA paws.
 
