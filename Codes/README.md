@@ -7,4 +7,10 @@
 [Annotation of ENSEMBL gene IDs](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/Analysis_geneAnnotation.R)
 [GSEA](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/Analysis_GSEA_GO.R)
 
-##### Figure 6
+##### Figure 6 RNAseq on human macrophages
+[Prepare DESeq2 colData]()
+[Construct a DESeqDataSet]()
+[DESeq2 remove batch effect and vst transformation]()
+[DESeq2 statistical test]()
+[Annotation of ENSEMBL gene IDs]()
+[GSEA]
