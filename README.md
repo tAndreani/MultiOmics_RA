@@ -20,17 +20,20 @@ Rheumatoid arthritis (RA) is characterized by joint infiltration of immune cells
 
 ### Figure 2: UPLC-MS/MS metabolomics revealed early metabolic alterations in plasma of CIA mice.
 
-#### Fig.2a Principal component analysis (PCA) score plot with plasma samples projected onto the first 2 principal components. 
+#### [Fig.2a Principal component analysis (PCA) score plot with plasma samples projected onto the first 2 principal components.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/PCA_Plasma_Metabolome_Manuscript.R)
 
-#### Fig.2b Percentage of each metabolic group detected by UPLC-MS/MS. 
+#### [Fig.2b Percentage of each metabolic group detected by UPLC-MS/MS.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/donutChart_Manuscript.R)
 
-#### Fig.2c Number of significant metabolites at each time point (CIA samples compared to the controls).
+#### [Fig.2c Number of significant metabolites at each time point (CIA samples compared to the controls).](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/barPlot_DEG_Met_Number.R)
 
-#### Fig.2d Percentage of significant metabolites per metabolite group at each time point.
+#### [Fig.2d Percentage of significant metabolites per metabolite group at each time point.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/linePlot_barPlot_metabolite_proportion.R)
 
-#### Fig.2e Percentage of upregulated and downregulated significant metabolites per group over time. 
+#### [Fig.2e Percentage of upregulated and downregulated significant metabolites per group over time.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/linePlot_barPlot_metabolite_proportion.R)
 
-#### Fig.2f-g Fold changes and significances of peptides, energy metabolites and related cofactors that are significant at >= 2 time points (these 2 figures were plotted on the same scale). 
+#### [Fig.2f Fold changes and significances of peptides that are significant at >= 2 time points.](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/dotPlot_peptide.R)
+
+#### [Fig.2g Fold changes and significances of energy metabolites and related cofactors that are significant at >= 2 time points.]
+(https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/dotPlot_carbohydrate.R)
 
 ### Figure 3: Transcriptional profiling of CIA paws over disease progression revealed innate immune cell activation and metabolic adaptations.
 
