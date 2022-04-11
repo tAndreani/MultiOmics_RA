@@ -1,0 +1,170 @@
+---
+title: "CIA Seahorse assay"
+author: "Immunometabolism group"
+date: "11/24/2020"
+output: html_document
+---
+
+<style type="text/css">
+
+body{ /* Normal  */
+      font-size: 16px;
+  }
+td {  /* Table  */
+  font-size: 12px;
+}
+h1.title {
+  font-size: 28px;
+}
+h1 { /* Header 1 */
+  font-size: 24px;
+  color: DarkBlue;
+}
+h2 { /* Header 2 */
+    font-size: 20px;
+}
+h3 { /* Header 3 */
+    font-size: 18px;
+}
+code.r{ /* Code block */
+    font-size: 12px;
+}
+pre { /* Code block - determines code spacing between lines */
+    font-size: 14px;
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, python.reticulate = FALSE)
+```
+
+```{r Import library, echo=FALSE}
+library(tidyverse)
+library(ggiraph)
+```
+
+```{r Import data, include=FALSE}
+# Import Seahorse data
+inputR <- read.csv("~/CIA_FH2000/Seahorse/tidyData/Seahorse_tidyFormat_11242020.csv", header = FALSE)
+
+# Rename column names
+colnames(inputR) <- inputR[1, ]
+inputR <- inputR[-1, ]
+
+# Import spleen weight data
+spleen <- read.csv("~/CIA_FH2000/Phenotype/data/CIA_spleenWeight.csv")
+
+spleen <- spleen[, -1]
+```
+
+```{r Tidy data, include=FALSE}
+# Change to long format
+inputR_long <- inputR %>%
+  pivot_longer(
+    cols = 5:19,
+    names_to = "Time",
+    values_to = "Value",
+    values_drop_na = TRUE
+  )
+
+spleen$mouseID <- as.character(spleen$mouseID)
+
+# Merge
+df <- inner_join(inputR_long, spleen,
+  by = c("Sacrifice_Date", "mouseID")
+)
+
+# Tidy data
+df$Time <- as.numeric(df$Time)
+df$Parameter <- factor(df$Parameter, levels = c("OCR (pmol/min)", "ECAR (mpH/min)"))
+df$Treatment <- factor(df$Treatment, levels = c("Ctrl", "CIA"))
+```
+
+```{r Set plot theme, include=FALSE}
+standard_theme <- theme(
+  axis.line = element_line(colour = "black"),
+  axis.text.x = element_text(color = "black", size = 24, face = "bold", angle = 90, vjust = 0.5),
+  axis.title.x = element_text(color = "black", size = 24, face = "bold"),
+  axis.text.y = element_text(color = "black", size = 24, face = "bold"),
+  axis.title.y = element_text(color = "black", size = 24, face = "bold"),
+  legend.position = "none",
+  strip.text.x = element_text(color = "black", size = 24, face = "bold"),
+  strip.text.y = element_text(color = "black", size = 24, face = "bold"),
+  strip.background = element_rect(fill = "white"),
+  panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+  panel.background = element_blank(),
+  panel.border = element_rect(colour = "black", fill = NA, size = 1),
+  plot.margin = unit(c(0.5, 0.5, 0, 0.5), "cm"),
+  plot.title = element_text(color = "black", size = 24, face = "bold")
+)
+```
+
+```{r linePlot Ctrl, echo=FALSE}
+p1_Ctrl <- df %>%
+  filter(Treatment == "Ctrl") %>%
+  ggplot(aes(x = Time, y = Value, group = mouseID)) +
+  geom_path(aes(color = mouseID), size = 1) +
+  geom_jitter_interactive(aes(tooltip = mouseID, data_id = mouseID), width = .05, size = 2) +
+  facet_grid(rows = vars(Parameter), cols = vars(Timepoint), scales = "free_y") +
+  geom_vline(xintercept = c(34.5, 54.4), color = "#9999CC")
+
+p2_Ctrl <- p1_Ctrl +
+  standard_theme +
+  ggtitle("Splenocytes from control mice") +
+  scale_color_viridis_d()
+
+girafe(ggobj = p2_Ctrl, width_svg = 30, height_svg = 20)
+```
+
+```{r linePlot CIA, echo=FALSE}
+p1_CIA <- df %>%
+  filter(Treatment == "CIA") %>%
+  ggplot(aes(x = Time, y = Value, group = mouseID)) +
+  geom_path(aes(color = mouseID), size = 1) +
+  geom_jitter_interactive(aes(tooltip = mouseID, data_id = mouseID), width = .05, size = 2) +
+  facet_grid(rows = vars(Parameter), cols = vars(Timepoint), scales = "free_y") +
+  geom_vline(xintercept = c(34.5, 54.4), color = "#9999CC")
+
+p2_CIA <- p1_CIA +
+  standard_theme +
+  labs(title = "Splenocytes from CIA mice", x = "Time", y = NULL) +
+  scale_color_viridis_d()
+
+girafe(ggobj = p2_CIA, width_svg = 30, height_svg = 20)
+```
+
+```{r linePlot OCR 7 weeks, echo=FALSE}
+p1_w7 <- df %>%
+  filter(Treatment == "CIA" & Timepoint == "7 weeks" & Parameter == "OCR (pmol/min)") %>%
+  ggplot(aes(x = Time, y = Value, group = mouseID)) +
+  geom_path(aes(color = mouseID), size = 1) +
+  geom_jitter_interactive(aes(tooltip = Value, data_id = mouseID), width = .05, size = 4) +
+  facet_grid(rows = vars(mouseID), scales = "free_y") +
+  geom_vline(xintercept = c(34.5, 54.4), color = "#9999CC")
+
+p2_w7 <- p1_w7 +
+  standard_theme +
+  labs(title = "OCR: Splenocytes from CIA mice at 7 weeks", x = "Time", y = NULL) +
+  scale_color_viridis_d()
+
+girafe(ggobj = p2_w7, width_svg = 30, height_svg = 30)
+```
+
+```{r dotBoxplot, echo=FALSE}
+df_spleen <- df %>%
+  select("Timepoint", "Sacrifice_Date", "mouseID", "Treatment", "Spleen_mg")
+
+df_spleen_save <- df_spleen[!duplicated(df_spleen), ]
+
+p <- df_spleen_save %>%
+  ggplot(aes(x = Treatment, y = Spleen_mg, fill = Treatment))+
+  geom_boxplot(position = position_dodge(0.8), alpha = .7, colour = "#A4A4A4") +
+  geom_jitter_interactive(aes(tooltip = mouseID, data_id = mouseID), width = .05, size = 4) 
+
+gg_dotBoxplot <- p +
+  labs(title = "Spleen weight", x = NULL, y = "Weight (mg)") +
+  standard_theme +
+  facet_grid(cols = vars(Timepoint))
+
+girafe(ggobj = gg_dotBoxplot, width_svg = 30, height_svg = 10)
+```
