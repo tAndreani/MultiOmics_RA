@@ -1,3 +1,14 @@
+### Flow cytometry analysis with R
+Raw data and analysis results are stored in: s3://snf-mgln-immunometabolism/CIA_FH2000/FACS
+The scripts are:
+https://github.com/tAndreani/MultiOmics_RA/blob/main/Additional_Experiments/Snippet_Step0_QC.R
+https://github.com/tAndreani/MultiOmics_RA/blob/main/Additional_Experiments/Snippet_Step1_Read_Comp_Trans.R
+https://github.com/tAndreani/MultiOmics_RA/blob/main/Additional_Experiments/Snippet_Step2_autoGating_CD45cells.R
+https://github.com/tAndreani/MultiOmics_RA/blob/main/Additional_Experiments/Snippet_Step3_CATALYST.R
+https://github.com/tAndreani/MultiOmics_RA/blob/main/Additional_Experiments/Snippet_Step4_ridgelinePlot.R
+https://github.com/tAndreani/MultiOmics_RA/blob/main/Additional_Experiments/Snippet_Step5_diffExpression.R
+https://github.com/tAndreani/MultiOmics_RA/blob/main/Additional_Experiments/Snippet_manualGating.R
+
 ### Seahorse Real-Time Cell Metabolic Analysis
 R Markdown interface on Seahorse raw data: https://github.com/tAndreani/MultiOmics_RA/blob/main/Additional_Experiments/Seahorse_11242020.Rmd
 
