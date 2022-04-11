@@ -1,4 +1,6 @@
 ### Seahorse Real-Time Cell Metabolic Analysis
+R Markdown interface on Seahorse raw data: https://github.com/tAndreani/MultiOmics_RA/blob/main/Additional_Experiments/Seahorse_11242020.Rmd
+
 The following figures are produced by script: https://github.com/tAndreani/MultiOmics_RA/blob/main/Additional_Experiments/Seahorse_Calculation_20210110.R
 
 ![Seahorse experiment scheme](https://github.com/tAndreani/MultiOmics_RA/blob/main/Additional_Experiments/Demo_OCR_ECAR_20210110.png)
