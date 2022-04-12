@@ -24,14 +24,12 @@
 [GSEA](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/Analysis_GSEA_GO_BP_hs.R)
 
 ##### Figure 7 RNAseq on human synoviums
-[Prepare DESeq2 colData]()
+[Construct a DESeqDataSet](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/Analysis_GSE89408_DESeq2_ddsConstruction.R)
 
-[Construct a DESeqDataSet]()
+[DESeq2 vst transformation](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/PCA_GSE89408_DESeq2_Normalization.R)
 
-[DESeq2 remove batch effect and vst transformation]()
+[DESeq2 statistical test](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/Analysis_GSE89408_DESeq2_Wald_Test.R)
 
-[DESeq2 statistical test]()
+[Annotation of ENSEMBL gene IDs](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/Analysis_GSE89408_geneAnnotation.R)
 
-[Annotation of ENSEMBL gene IDs]()
-
-[GSEA]
+[GSEA](https://github.com/tAndreani/MultiOmics_RA/blob/main/Codes/Analysis_GSE89408_GSEA_GO_BP_hs.R)
