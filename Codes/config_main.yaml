@@ -1,0 +1,159 @@
+# Please check the parameters, and adjust them according to your circumstance
+
+# Project name
+PROJECT: CIA_Paw_Combi_Run
+
+# ================== Control of the workflow ==================
+
+## Do you need to do quality control?
+QC: yes  # "yes" or "no"
+
+## Do you need to do trimming?
+TRIM: yes  # "yes" or "no"?
+## If yes, tool used for trimming
+TOOL: trim_galore  # "fastp" or "trim_galore"
+
+## Do you want to filter rRNA reads ?
+rRNA: no  # yes or no
+
+## Do you want to perform alignment?
+ALIGN: yes  # "yes" or "no"?
+## If yes, which mapping reference do you want to use? Genome (alignment) or transcriptome (pseudo-alignment)?
+REFERENCE: genome  # "genome" or "transcriptome"
+
+## Do you want to do Differential Expression Analysis (DEA)?
+DEA: no # "yes" or "no"
+## If yes, do you want to use edgeR or DESeq2 to do DEA?
+DEATOOL: edgeR  # "edgeR" or "DESeq2"? DESeq2 is recommended for transcriptome-based DEA
+
+## Do you want to visualize the results of DEA?
+VISUALIZE: no  # "yes" or "no"
+
+
+# ================== Shared parameters for some or all of the sub-workflows ==================
+
+## the path to fastq files
+READSPATH: s3://snf-mgln-immunometabolism/CIA_FH2000/RNAseq/runConcatenation/
+
+## is the sequencing paired-end or single-end?
+END: pair  # "pair" or "single"
+
+## regex for the input fastq files for paired-end reads
+## default:
+INPUTREGEXP1: "{wildcards.sample}_R1_001.f*q.gz"
+INPUTREGEXP2: "{wildcards.sample}_R2_001.f*q.gz"
+
+## regex for the input files for single-end reads
+#INPUTREGEXP: "{wildcards.sample}*.f*q.gz"
+#INPUTREGEXP: "{wildcards.sample}_R1_001.f*q.gz"
+
+## number of cores you want to allocate to this workflow
+NCORE: 96  # Use command "getconf _NPROCESSORS_ONLN" to check the number of cores/CPU on your machine
+
+## key file if the data is stored remotely, otherwise leave it empty
+KEY: 
+
+## the meta file describing the experiment samples (defined in the GUI when using Magellan pipeline)
+METAFILE: configs/metadata.tsv
+
+## paths for intermediate outputs and final outputs (defined in the GUI when using Magellan pipeline)
+OUTPUTPATH: /root/raw_data/output  #intermediate output. do not upload to github
+FINALOUTPUT: /root/output
+
+# ================== Configuration for Quality Control ==================
+
+## All required params have already been defined in the public params
+
+# ================== Configuration for trimming ==================
+
+## extra parameters for fastp
+FASTP:
+    other_options: "" # example : "--cut_tail --cut_window_size 4 --cut_mean_quality 20"
+
+# ================== Configuration for rRNA filtering ==================
+## sortmera v2.1b parameters
+sortmerna:
+    threads: 2                  # Default 1
+    num_alignments: 1            # Default 1
+    database: "rRNA_databases"    # Default sortmerna database ("rRNA database"); path to input directory or input fasta file
+
+# ================== Configuration for quantification using transcriptome ==================
+
+## transcriptome file
+TRANS: s3://snf-mgln-biomics-share/transcriptome/Homo_sapiens.GRCh38.cds.all.fa.gz
+
+salmon:
+    threads : 2                                                         # Default 1
+    libtype: "A"                                                        # Type of sequencing library : Default "A" i.e. automatically infer the library type
+    extra: "--seqBias --useVBOpt --validateMappings"                    # extra parameters for salmon
+
+# ================== Configuration for alignment to genome and feature count ==================
+
+## genome and annotation files
+GENOME: s3://snf-mgln-immunometabolism/CIA_FH2000/RNAseq/genome/GRCm39/GRCm39.primary_assembly.genome.fa
+ANNOTATION: s3://snf-mgln-immunometabolism/CIA_FH2000/RNAseq/genome/GRCm39/gencode.vM26.annotation.gtf
+ATTRIBUTE: gene_id  # the attribute used in annotation file. It's usually "gene_id", but double check that since it may also be "gene", "ID"...
+
+## which mapping tool do you want to use for genome alignment ? hisat2 (spliced aware) or bwa (non spliced-aware; recommanded for bacterial RNA-seq) ?
+ALIGNER: hisat2          # hisat2 or bwa
+
+# hisat2 parameters
+hisat2:
+    threads: 2  # Default 1
+
+#bwa parameters
+bwa:
+    threads: 2  # Default 1
+
+## tool for feature count
+COUNTER: featureCounts  # default is "featureCounts", or you may want to use "htseq-count"
+
+subread-featureCounts:
+    attr_type: "gene_id"                                                # Default 'gene_id'
+    feature_type: "exon"                                                # Default 'exon'
+    strand_specificity: 2                                               # Strand-specific read counting, 0 (unstranded)(default), 1 (stranded) or 2 (reversely stranded)
+    multi_mapping: ""
+    threads: 2                                                          # Default 1
+
+htseqCounts:
+    attr_type: "gene_id"                                                # Default 'gene_id'
+    feature_type: "exon"                                                # Default 'exon'
+    strand_specificity: 'yes'                                           # whether the data is from a strand-specific assay. no(unstranded), yes(stranded)(default), reverse(reversely stranded)
+    mode: "union"                                                       # union(default), intersection-strict and intersection-nonempty 
+
+## alignment quality control
+alignmentQC: yes  # "yes" or "no" to specify whether you want to do alignment QC using Qualimap2
+
+qualimap:
+    strand_specificity: 2                                               # Strand-specific read counting, 0 (unstranded)(default), 1 (stranded) or 2 (reversely stranded)
+
+## Do you want to run RSeQC ? Could increase run time
+RSEQC: yes    #"yes" or "no"?
+
+# ================== Configuration for DEA ==================
+
+## the comparison(s) you want to do. If multiple comparisons, specify each pair (CONTROL & TREAT) in order respectively
+CONTROL: ["LGLI"]
+TREAT: ["NASH"]
+## length of 'CONTROL' should agree with that of 'TREAT'
+## what you fill in there should agree with the "group" column in metadata.tsv
+
+## Is your experiment designed in a pair-wise way?
+PAIR: FALSE  # Is this a pair test or not? ("TRUE" or "FALSE")
+
+FILTER:
+  yesOrNo: TRUE  # Filter out low expressed transcripts/genes or not? (TRUE or FALSE) It's better to be set to TRUE. FALSE is set as default only for testing fake toy data
+
+## If transcriptome was used as mapping reference in the previous quantification step, the following params need to be specifed
+## Do you need to do gene-level differential expression analysis?
+GENE_LEVEL: TRUE  # TRUE or FALSE. But if you are using De Novo assembly or not using ENSEMBL, FALSE is the only option
+## If TRUE, specify the corresponding dataset in ENSEMBL for your interested organism
+ENSEMBL: TRUE  # TRUE or FALSE. Specify whether you're using transcriptome from Ensembl or you provide your homemade one: then you need to specify the corresponding Ensembl dataset or your tx2gene file (two columns, 1st col: transcript ID; 2nd col: gene ID)
+EnsemblDataSet: hsapiens_gene_ensembl  # search for your dataset in the file EnsemblDataSet_look_up_table.csv 
+TX2GENE: /export/jonassenfs/xiaokangz/dcod/data/genome/tx2gene_gadMor3.tsv  # only if ENSEMBL was set to FALSE
+
+# ================== Configuration for visualization ==================
+
+## All required params have already been defined in the public params
+
+# =====================================================================
